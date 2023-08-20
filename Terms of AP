@@ -1,0 +1,23 @@
+import java.util.* ;
+ import java.io.*;
+class Solution{
+ public static int[] termsOfAP(int x) {
+        int n = 1;
+        int[] a = new int[x];   
+		int i=0;
+        while(i<x) {  
+            int term = (3 * n) + 2;
+            
+            if (term % 4 != 0) {
+                a[i] = term;
+                n++;
+				i++; 
+            }
+			else{
+				n++;
+			}
+        }
+        
+        return a; 
+    }
+}
